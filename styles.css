@@ -6,6 +6,10 @@
   font-family: "Press Start 2P", system-ui;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F2DF80;
   height: 100vh;
@@ -68,9 +72,11 @@ header nav ul{
 
 header nav ul li{
   display: inline-block;
-  padding: 20px 30px;
+  padding: 15px 25px;
   background: #F2B705;
-  border-radius: 30px; 
+  border-top-right-radius: 30px; 
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 /* estilo do conteudo*/
@@ -104,6 +110,203 @@ section.conteudo.flex{
   margin-left: 20%;
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+.conteudo2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  gap: 20px
+}
+
+.imagem-conteudo2 img{
+  max-width: 100%;
+  height: auto;
+  width: 650px;
+}
+
+.boxTitle-conteudo2{
+  flex: 1
+}
+
+.text-conteudo2{
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.rank{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #168AAD;
+  position: relative;
+}
+
+.card-rank{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  height: 90%;
+  background-color: #F2DF80;
+  border-radius: 15px;
+  border: #F2B705 solid 25px;
+  z-index: 1;
+}
+
+.card-title{
+  padding-bottom: 14px;
+  color: #168AAD;
+  text-align: center;
+}
+
+.list, .list-item, .list-item-body, .list-item-header{
+  display: flex;
+}
+
+.list{
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-item{
+  width: calc(100% - 20px);
+  max-height: 60px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.list-item-header{
+  width: 20%;
+  align-items: center;
+  margin: 10px;
+}
+
+.list-item-header-bagde{
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -4px;
+  width: 26px;
+  height: 26px;
+  display: block;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: #F2B705;
+  text-align: center;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    color:#168AAD
+}
+
+/* .list-item-header-body-icon{
+  background-color: #168AAD;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+} */
+
+.list-item-icon{
+  width: 60px;
+  max-height: 60px;
+  margin-left: 4px;
+  margin-top: -6px;
+}
+
+.list-item-body{
+  width: 100%;
+  flex-direction: column;
+}
+
+.list-item-title{
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 900;
+  color: #168AAD;
+  letter-spacing: 0.125rem;
+}
+
+.list-item-subtitle{
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.1rem;
+}
+
+.list-item-progress-bar{
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2px;
+  background-color: #F2B705;
+  border-radius: 4px;
+}
+
+.list-item-progress-bar span{
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  background-color: #168AAD;
+  transition: width 0.6s ease;
+}
+
+.img-violeta{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 40px;
+  width: 500px;
+  height: auto;
+  z-index: 2;
+}
+
+.membros{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.membros .img-balao-membros{
+  width: 400px;
+  height: auto;
+}
+
+.membros .img-equipe-unida{
+  width: 1000px;
+  height: auto;
+  margin-top: auto;
+}
+
+footer{
+  height: 50px;
+  background-color: rgba(92, 192, 223, 0.9);
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p{
+  text-align: center;
+  margin: 0;
 }
 
 @keyframes flutuar{

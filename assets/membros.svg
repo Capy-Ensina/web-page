@@ -1,17 +1,17 @@
-<svg width="1128" height="296" viewBox="0 0 1128 296" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="M878.039 63.5564H1127.53V295.807H878.039V63.5564Z" fill="url(#pattern0_71_167)"/>
-<path d="M700.67 0.799316H1017.4V295.649H700.67V0.799316Z" fill="url(#pattern1_71_167)"/>
-<path d="M580.799 63.5564H830.287V295.807H580.799V63.5564Z" fill="url(#pattern2_71_167)"/>
-<path d="M435.588 63.5564H685.077V295.807H435.588V63.5564Z" fill="url(#pattern3_71_167)"/>
-<path d="M283.557 63.5564H533.045V295.807H283.557V63.5564Z" fill="url(#pattern4_71_167)"/>
-<path d="M136.395 63.5564H385.883V295.807H136.395V63.5564Z" fill="url(#pattern5_71_167)"/>
-<path d="M0.931641 63.5564H250.42V295.807H0.931641V63.5564Z" fill="url(#pattern6_71_167)"/>
+<svg width="1127" height="287" viewBox="0 0 1127 287" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M877.107 53.8831H1126.6V286.134H877.107V53.8831Z" fill="url(#pattern0_71_167)"/>
+<path d="M720 0.125977H1016.47V287H720V0.125977Z" fill="url(#pattern1_71_167)"/>
+<path d="M579.867 53.8831H829.356V286.134H579.867V53.8831Z" fill="url(#pattern2_71_167)"/>
+<path d="M434.656 53.8831H684.145V286.134H434.656V53.8831Z" fill="url(#pattern3_71_167)"/>
+<path d="M282.625 53.8831H532.114V286.134H282.625V53.8831Z" fill="url(#pattern4_71_167)"/>
+<path d="M135.463 53.8831H384.952V286.134H135.463V53.8831Z" fill="url(#pattern5_71_167)"/>
+<path d="M0 53.8831H249.489V286.134H0V53.8831Z" fill="url(#pattern6_71_167)"/>
 <defs>
 <pattern id="pattern0_71_167" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_71_167" transform="matrix(0.00390625 0 0 0.00419618 0 -0.037111)"/>
 </pattern>
 <pattern id="pattern1_71_167" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_71_167" transform="matrix(0.00390625 0 0 0.00419618 0 -0.0371109)"/>
+<use xlink:href="#image1_71_167" transform="matrix(0.00417321 0 0 0.00431284 -0.0683428 -0.0381426)"/>
 </pattern>
 <pattern id="pattern2_71_167" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image2_71_167" transform="matrix(0.00390625 0 0 0.00419618 0 -0.037111)"/>

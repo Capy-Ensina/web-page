@@ -22,11 +22,9 @@
 
     <nav class="menu">
       <ul>
-        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#objetivo">Objetivo</a></li>
         <li><a href="#ranking">Ranking</a></li>
         <li><a href="#equipe">Equipe</a></li>
-        <!-- <li><a href="#redessocais">Redes Sociais</a></li> -->
       </ul>
     </nav>
     <div>
@@ -43,13 +41,6 @@
                 <div class="texto">
                     <h1>Capy Ensina</h1>
                     <p>é um jogo de simulação que ensina educação financeira.</p>
-                    <div class="btn-start">
-                        <a href="#">
-                            <button>
-                                <img src="assets/startbutton.svg">
-                            </button>
-                        </a>
-                    </div>
                 </div>
                 <div class="imagem-conteudo">
                     <img src="assets/capycoin.svg">
@@ -64,23 +55,20 @@
         <img src="assets/capydeouro.svg"/>
       </div>
       <div class="boxTitle-conteudo2">
-        <pre class="text-conteudo2">
-                    O Capy quer 
-          transformar a vida de 
-            jovens de baixa renda 
-          que estão começando no 
-            mercado de trabalho.
-        </pre>
+        <p class="text-conteudo2">
+                    O Capy quer transformar a vida de jovens de baixa renda que estão começando no mercado de trabalho.
+        </p>
       </div>
     </section>
 
     <!--Rank-->
     <section class="rank" id="ranking">
       <div class="card-rank">
+        <div class="card-title">
+          <h1>Ranking</h1>
+        </div>
 
-        <div class="card-title"><h1>Ranking</h1></div>
-
-          <ul class="list">
+          <ul class="list" id="ranking-list">
             <li class="list-item">
               <div class="list-item-header">
                 <span class="list-item-header-bagde">1</span>
@@ -182,12 +170,72 @@
         <img src="assets/balão.svg" class="img-balao-membros"/>
       </div>
       <div class="equipe-unida">
-        <img src="assets/membros_png.png" class="img-equipe-unida"/>
+        <img src="assets/membros.png" class="img-equipe-unida"/>
       </div>
     </section>
     <footer>
       <p>2024 Capy Ensina. Todos os direitos reservados.</p>
     </footer>
   </main>
+
+  <script>
+    const fetchRanking = async () => {
+  try {
+    // Fazendo a requisição para a API
+    const response = await fetch('https://web-api-capyensina.up.railway.app/ranking');
+    const data = await response.json();
+    
+   
+    console.log('Ranking recebido:', data);
+
+   
+    if (Array.isArray(data)) {
+      renderRanking(data); 
+    } else {
+    
+      renderRanking([data]);
+    }
+  } catch (error) {
+    console.error('Erro ao buscar ranking:', error);
+  }
+};
+
+const renderRanking = (rankingData) => {
+  const rankingList = document.querySelector('.list');
+  rankingList.innerHTML = ''; 
+
+ 
+  rankingData.forEach((ranking, index) => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('list-item');
+
+    // Adicionando o HTML para cada item do ranking
+    listItem.innerHTML = `
+      <div class="list-item-header">
+        <span class="list-item-header-badge">${index + 1}</span>
+        <div class="list-item-header-body-icon">
+          <img src="assets/Ellipse 176.svg" class="list-item-icon" alt="Ícone do jogador"/>
+        </div>
+      </div>
+      <div class="list-item-body">
+        <span class="list-item-title">${ranking.usuario}</span> <!-- Nome do jogador -->
+        <span class="list-item-subtitle">Pontos ${ranking.pontuacao}</span> <!-- Pontuação do jogador -->
+        <div class="list-item-progress-bar">
+          <span class="progress" style="width: ${(ranking.pontuacao / 100) * 100}%"></span> <!-- Barra de progresso -->
+        </div>
+      </div>
+    `;
+    rankingList.appendChild(listItem);
+  });
+};
+
+// Chama a função ao carregar a página
+document.addEventListener('DOMContentLoaded', fetchRanking);
+
+  </script>
+
+
+
+
 </body>
 </html>

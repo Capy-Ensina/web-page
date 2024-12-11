@@ -115,6 +115,8 @@
                 </div>
               </div>
             </li>';
+
+                  if ($index >= 4) break;
                 }
             } else {
                 echo "<p class='error'>Os dados retornados não estão no formato esperado.</p>";

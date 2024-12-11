@@ -183,6 +183,9 @@
   try {
     // Fazendo a requisição para a API
     const response = await fetch('https://web-api-capyensina.up.railway.app/ranking');
+    if (!response.ok) {
+            throw new Error(`Erro: ${response.status} - ${response.statusText}`);
+    }
     const data = await response.json();
     
    
@@ -211,6 +214,7 @@ const renderRanking = (rankingData) => {
 
     // Adicionando o HTML para cada item do ranking
     listItem.innerHTML = `
+    <li class="list-item">
       <div class="list-item-header">
         <span class="list-item-header-badge">${index + 1}</span>
         <div class="list-item-header-body-icon">
@@ -224,6 +228,7 @@ const renderRanking = (rankingData) => {
           <span class="progress" style="width: ${(ranking.pontuacao / 100) * 100}%"></span> <!-- Barra de progresso -->
         </div>
       </div>
+      </li>
     `;
     rankingList.appendChild(listItem);
   });
